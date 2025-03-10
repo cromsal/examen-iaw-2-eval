@@ -49,6 +49,10 @@ terraform apply -auto-approve
 ```
 
 ## Ejercicio3  
+Instalamos ansible: 
+```
+sudo apt install ansible -y
+```
 Para lanzar el script de la instalación de docker mediante ansible utilizamos:
 ```
 ansible-playbook -i ../inventory/inventario install_docker.yaml
