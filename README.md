@@ -47,3 +47,9 @@ Crea los recursos del archivo de configuración en su cuenta de AWS.
 ```
 terraform apply -auto-approve
 ```
+
+## Ejercicio3  
+Para lanzar el script de la instalación de docker mediante ansible utilizamos:
+```
+ansible-playbook -i ../inventory/inventario install_docker.yaml
+```
