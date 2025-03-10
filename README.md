@@ -22,3 +22,38 @@ aws ec2 run-instances \
     --security-groups grupo_seguridad_ejercicio_1 \
     --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=instancia_ejercicio_1}]"
 ```
+
+## Ejercicio2  
+En primer lugar hay que descargar los plugins necesarios del proveedor que se especifica en el archivo de configuración.
+```
+terraform init
+```
+
+Terraform nos proporciona un comando para formatear el archivo de configuración para que sea más legible. Algunas de las tareas que realiza este comando son, ajustar la indentación, ordenar los argumentos de los bloques de configuración, etc.
+```
+terraform fmt
+```
+Para validar la sintaxis del archivo de configuración podemos utilizar el siguiente comando.
+```
+terraform validate
+```
+
+Compara la configuración del archivo de Terraform con la que existe actualmente en el proveedor de infraestructura y muestra las acciones que se tienen que realizar para conseguir la configuración deseada. Permite al usuario verificar los cambios antes de aplicarlos en el proveedor.
+```
+terraform plan
+```
+
+Crea los recursos del archivo de configuración en su cuenta de AWS.
+```
+terraform apply -auto-approve
+```
+
+## Ejercicio3  
+Instalamos ansible: 
+```
+sudo apt install ansible -y
+```
+Para lanzar el script de la instalación de docker mediante ansible utilizamos:
+```
+ansible-playbook -i ../inventory/inventario install_docker.yaml
+```
