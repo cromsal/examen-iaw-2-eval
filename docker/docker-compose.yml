@@ -1,0 +1,8 @@
+
+services:
+  web:
+    image: cromsal532/examen_iaw_2
+    container_name: pruebaip
+    ports:
+      - 80:80
+    restart: always
