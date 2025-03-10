@@ -11,7 +11,7 @@ RUN apt update && \
     apt install git -y && \
     rm -rf /var/lib/apt/list/*
 
-RUN git clone https://github.com/cromsal/practica-mkdocs.git && \
+RUN git clone https://github.com/cromsal/practica-mkdocs /app/site && \
     mv /app/site/* /var/www/html/
 
 EXPOSE 80

@@ -56,4 +56,10 @@ sudo apt install ansible -y
 Para lanzar el script de la instalación de docker mediante ansible utilizamos:
 ```
 ansible-playbook -i ../inventory/inventario install_docker.yaml
+```  
+
+## Ejercicio4  
+Construimos la imagen creada en el dockerfile
+```
+sudo docker build -t cromsal532/examen_iaw_2 .
 ```
